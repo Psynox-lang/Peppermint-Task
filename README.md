@@ -171,4 +171,12 @@ ros2 run color_follower follower_node
 | `LOWER_GREEN` | `[59, 240, 95]` | HSV lower bound |
 | `UPPER_GREEN` | `[61, 255, 110]` | HSV upper bound |
 
+## Video Demo
+
+
+https://github.com/user-attachments/assets/f0e73fec-1b46-4dea-8965-4c72aab543ed
+
+
+
+
 > **Tip:** If the sphere isn't detected in your environment, adjust HSV bounds by capturing a frame with `rqt_image_view` and using a colour picker.

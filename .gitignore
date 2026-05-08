@@ -1,0 +1,14 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# VS Code
+.vscode/
+*.vc.db
+*.vc.db-shm
+*.vc.db-wal
+
+# Python
+__pycache__/
+*.pyc

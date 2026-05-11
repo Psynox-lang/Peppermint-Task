@@ -160,6 +160,16 @@ ros2 run color_follower follower_node
 
 ---
 
+## Design Descisions
+
+### Q1f — Out-of-Frame Recovery
+The most common cause of losing the sphere is the robot overshooting during alignment — a slight over-rotation pushes the sphere out of the camera FOV. When no green contour is detected, the node spins slowly CCW at 0.08 rad/s until the sphere re-enters the frame.
+A more robust approach would track the last known sign of the error before losing the sphere and spin in that direction instead of always defaulting to CCW. This would handle cases where the sphere goes out of frame on the right side, where a CCW spin would actually rotate the robot further away from it.
+
+### Q1g — Proximity Stop
+The primary stop signal is the LiDAR front sector (±30°). This is more reliable than vision-only approaches because it works regardless of lighting conditions, sphere occlusion, or camera exposure changes.
+As a secondary signal, the contour area in the camera frame grows predictably as the robot closes in — a threshold on pixel area alone can approximate closeness without needing LiDAR at all. A depth camera (e.g. Intel RealSense D435) would be the most accurate option, providing per-pixel distance to the sphere directly and removing any ambiguity about which obstacle the LiDAR is actually measuring.
+
 ## 🔧 Tuning Parameters
 
 | Parameter | Default | Description |

@@ -1,6 +1,6 @@
 # 🤖 Color-Based Navigation — Peppermint Robotics Intern Challenge
 
-**Candidate:** Utkarsh | [@Psynox-lang](https://github.com/Psynox-lang)  
+**Candidate:** Utkarsh Kumar | [@Psynox-lang](https://github.com/Psynox-lang)  
 **Stack:** ROS2 Humble · TurtleBot3 Waffle · OpenCV · Gazebo  
 **Platform:** Ubuntu 22.04
 
